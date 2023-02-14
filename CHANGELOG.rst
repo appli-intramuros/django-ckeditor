@@ -6,6 +6,10 @@ Unreleased
 
 #. Replace ``ugettext_lazy()`` with ``gettext_lazy()``
 
+5.10.11
+-----
+#. Change size of generated random unique ID for image name (32 -> 8)
+
 5.10.10
 -----
 #. Filter files by type (video/image/all)

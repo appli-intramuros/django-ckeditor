@@ -88,8 +88,8 @@ class PillowBackend(object):
 
     def save_as(self, filepath):
         # Add a unique ID for the file
-        unique_id = '%32x' % random.getrandbits(16 * 8)
-        filepath = "%s_%s%s" % (os.path.splitext(filepath)[0], unique_id, os.path.splitext(filepath)[1])
+        unique_id = '%08x' % random.getrandbits(4 * 8)
+        filepath = "%s_%s%s" % (os.path.splitext(filepath)[0], unique_id.strip(), os.path.splitext(filepath)[1])
         filepath = filepath.lower()
 
         if not self.is_image:
